@@ -1,0 +1,378 @@
+
+html{
+    scroll-behavior: smooth;
+    
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    /* this removes the horizontal scroll wheel */
+    overflow-x: hidden; 
+}
+
+/* this is the maintopdiv of the image */
+.maintopdiv{
+    display: flex;
+    flex-direction: row;
+    /* aligning the rows to the right */
+    justify-content: flex-end;
+    border: 3px solid coral;
+    height: 21vh;
+    margin: .25vh 1.6vh .5vh 1.6vh;
+    /* add background image now */
+
+    /* need position relative in the main for the children to be position absolute */
+    position: relative;
+    overflow: hidden;
+    
+   
+
+}
+
+/* .maintopdiv::before */
+.topdivimage {
+    position: absolute;
+    top: 0;
+    /* update all these values from px to vh vw */
+    left: -50px; /* Spills out on the left */
+    width: 2500px;
+    height: 350px;
+    margin-top: -67px;
+    margin-left: -226px;
+    
+    background-image: url('images/tswbanner5.png');
+    background-position: left;
+    background-size: cover;
+    background-repeat: no-repeat;
+    /* this z index puts it in front of other content */
+    z-index: 1; 
+}
+/* I changed it to images to comment it out */
+
+
+
+.topdivtext{
+    display: flex;
+    flex-direction: column;
+    /* change to flex end later */
+
+            /* Horizontal alignment when column */
+/* aligning them to the right */
+    align-items: flex-end;
+    /* vertical alignment when column */
+/* aligning center */
+    justify-content: center;
+    border: .25vw solid rgb(103, 122, 111);
+    width: calc(65vw - .5vw);   
+    height: 21vh; 
+    row-gap: 0;
+    background: linear-gradient(to left, #0a335d 50%, white);
+    mix-blend-mode: overlay;
+    z-index: 0;
+
+    
+
+/* old background where its transparent */
+    /* background-color: rgba(255, 255, 255, 0); */
+    /* margin-left: 50vw; */
+}
+
+    .topdivtext h1{
+        font-weight: bold;
+        font-family: "Barlow", sans-serif;
+        font-size: 600%;
+        margin-bottom: 0;
+        margin-top: 2.6vh;
+        color: #ffffff;
+        margin-right: 10vw; 
+
+
+    }
+
+    /* the login, register, and about underneath the heading */
+
+
+    
+    .underneathheading{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: flex-start;
+    margin-right: 10vw;
+    column-gap: 1vw;
+    height: 26%;
+    margin-top: 0;
+    
+
+    }
+
+    .underneathheading p{
+        font-size: 126%;
+        font-family: Helvetica, Arial, sans-serif;
+    }
+
+    .underneathheading a{
+        color: rgb(255, 255, 255);
+        text-decoration: none;
+    }
+    .underneathheading a:visited{
+        color: rgb(255, 255, 255); 
+        text-decoration: none;
+    }
+    .underneathheading a:hover{
+        text-decoration: underline;
+        text-decoration: underline; 
+        /* Makes underline thicker */
+    text-decoration-thickness: 4px; 
+    /* Adjusts the space between text and underline */
+    text-underline-offset: .26vh; 
+    }
+
+    #underneathheadinglogin:hover{
+        text-underline-offset: .3vh; 
+
+    }
+    
+    #underneathheadingregister:hover{
+        text-underline-offset: .3vh; 
+
+    }
+
+
+    /* main div that holds everything in the body */
+.maindiv{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    height: 100vh;
+    width: 98.5vw;
+}
+.leftsection{
+    width: 65%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    /* flex-direction: row; */
+    flex-wrap: wrap;
+    gap: .5vw;
+
+    /* here I made the right value bigger to account for margin squishing */
+    margin: 1vh .5vw 1vh 2.6vw
+}
+/* the following is in leftsection div */
+
+
+
+.centraldiv{
+    display: flex;
+    width: 95%;
+    height: 89vh;
+    background-color: rgb(255, 255, 255);
+    border: 4px solid #153758;
+    border-top: 2vh solid #153758;
+    ;
+    flex-direction: column;
+    align-items: center;
+    padding: 1vh 3vw;
+    
+    border-radius: 2.6vh;
+    box-shadow: 0px 0px 26px 5px rgba(0, 0, 0, 0.15); 
+
+}
+/* this is in central div */
+.welcomemessage{
+    font-family: Helvetica,Arial sans-serif;
+    font-size: 156%;
+    margin: 10px 10px;
+    padding: 1vh 2vw
+}
+
+/* p's in central div */
+.centraldiv p{
+    font-family: "Roboto", Helvetica, sans-serif;
+    font-size: 126%;
+    font-weight: 400;
+}
+
+
+/* also in central div */
+.schoolist{
+    /* this should be a good set up to add a ton more schools in the future. */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 0% 10%;
+    border: 3px solid  #153758;
+    width: 70%;
+    /* gap between the school names */
+    column-gap: .75vw;
+    row-gap: 0;
+
+    height: 30vh;
+    flex-wrap: wrap;
+    align-content: center;
+    margin-bottom: 1vh;
+    border-radius: 1.6vw;
+}
+.schoolist p{
+    font-weight: bold;
+    font-size: 110%;
+
+}
+/* refer to school styles css for individual school names styles */
+/* schoolstyles.css */
+
+
+
+
+.rightsection{
+        width: 30%;
+        height: 89vh;
+        display: flex;
+        flex-direction: column; /* Stack divs vertically */
+        /* Horizontal alignment when column */
+        /* flex end aligns to the right */
+        align-items: flex-end;
+        /* vertical alignment when column */
+        justify-content: center;
+        gap: .5vw;
+
+        border: 4px solid #103357;
+        border-top: 2vh solid #153758;
+
+
+        background: #ffffff;
+        padding: 1vh 1vw;
+        margin: 1vh 1.95vw .1vh .65vw;
+        border-radius: 2.6vh;
+        box-shadow: 0px 0px 20px 6px rgba(0, 0, 0, 0.15);
+
+}
+
+/* rightsectiondiv1 has the gamemodes */
+
+.rightsectiondiv1{
+    height: 60vh;
+    width: 70%;
+    padding: 1vh 3vw;
+    background-color: white;
+    border: 3px solid #132f57;
+    margin-right: .5vw;
+    color: rgb(0, 0, 0);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    font-family: "Roboto", Helvetica, sans-serif;
+    font-weight: 400;
+
+}
+
+/* In HTML this says jump right in */
+.rightsectiondiv1 h2{
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+
+.rightsectiondiv1 h3{
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+
+/* rightsectiondiv2 has the login info */
+.rightsectiondiv2{
+    display: flex;
+    flex-direction: column;
+    /* this aligns the register and login text */
+    align-items: center;
+    /* when column this means at the bottom or at the top */
+    justify-content: center;
+    height: 40vh;
+    width: 50%;
+    margin-right: .5vw;
+    background-color:#132f57;
+    border: 3px solid lightgrey;
+    padding: 0% 4%;
+    /* this aligns the box itself */
+    align-self: flex-end;
+    /* text color */
+    color: white;
+    border-radius: 1.6vw;
+}
+.rightsectiondiv2 p, input{
+    margin: 1vh 0;
+}
+
+/*  */
+/* loginandregister div is in right section2 */
+.loginandregister{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    /* there is only one row thb */
+    row-gap: 1vh;
+    column-gap: 1vw;
+}
+
+footer{
+    /* bottom:0; */
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+    /* this padding applies to thefooter not the elements in the footer */
+    padding: 26px 30px; 
+    gap: 0px;
+    align-content: center;
+    /* gives some space */
+    margin-top: 5vh;
+    font-family: Helvetica ,Arial, sans-serif;
+    font-size: 126%;
+}
+.footer-links{
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+
+}
+
+
+.footerbottom{
+    padding: 0;
+    /* slightly bigger font size */
+    font-size: 106%;
+}
+
+footer a{
+text-decoration: none;
+color: #12345c;
+}
+.footer-links a:visited {
+    color: #12345c; 
+    text-decoration: none;
+}
+
+.footer-links a:hover{
+    cursor: pointer;
+    color: #12345c;
+    text-decoration: underline; 
+    text-decoration-thickness: 4px; /* Makes underline thicker */
+    /* Adjusts the space between text and underline */
+    text-underline-offset: .26vh; 
+}
+
+footer p {
+    margin: 1vh; 
+}
+footer img {
+    margin: 0; /* Optional: Remove margin for the image if you want it tighter */
+}
+

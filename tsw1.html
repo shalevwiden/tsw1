@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="tsw1.css" />
+    <!-- for the schoollist -->
+    <link rel="stylesheet" href="schoolstyles.css" />
+
+    <!-- roboto font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- barlow font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="maintopdiv">
+      <div class="topdivimage"></div>
+
+      <div class="topdivtext">
+        <h1 class="topdivelements">thespeedway</h1>
+        <div class="underneathheading">
+          <p><a id="underneathheadinglogin" href="">Login</a></p>
+          <p>
+            <a id="underneathheadingregister" href="registerpage.html"
+              >Register</a
+            >
+          </p>
+          <p><a href="tsw1about.html">About</a></p>
+        </div>
+      </div>
+    </div>
+
+    <!-- main div with left and right in it -->
+    <div class="maindiv">
+      <div class="leftsection">
+        <div class="centraldiv">
+          <div class="welcomemessage">
+            <h2>Welcome to Thespeedway!</h2>
+          </div>
+          <div class="aboutmessage">
+            <p>
+              Thespeedway is an online platform that provides a variety of
+              engaging digital experiences across colleges and universities.
+            </p>
+            <p>
+              Do our daily "bordle" building guesser daily, or choose from a
+              variety of online challenges. Track your score and see how you
+              rank up on your campus leaderboard.
+            </p>
+            <!--  try to identify
+              college campuses from the sky with campsite -->
+            <!-- that in the future -->
+          </div>
+          <p>We have opened up thespeedway at:</p>
+          <!-- this should adjust as we add more schools -->
+          <div class="schoolist">
+            <!-- Ok so the school list will link to that schools specific page -->
+            <!-- The Bordle in general will just link to the school selector bordle -->
+            <!-- And if you're logged in it will take you to your schools bordle right away -->
+            <!-- have school options in the Bordle creation -->
+            <a id="UT-Austin-school" href="collegespecific/UT/UT.html"
+              >The University of Texas at Austin</a
+            >
+          </div>
+          <p>
+            To get started, click to the right to make an account. You can play
+            the daily building guesser without an account, but you'll need an
+            account to track your score and play the other minigames.
+          </p>
+        </div>
+        <!-- If I want to add another div after my central section there is indeed space -->
+      </div>
+      <div class="rightsection">
+        <div class="rightsectiondiv1">
+          <h2>Jump In</h2>
+          <h3>Daily Bordle</h3>
+          <!-- Keep this as the main bordle page -->
+          <button><a href="../bordle/tsw1bordle.html">Bordle Button</a></button>
+          <ul>
+            <li>Zoomed In</li>
+            <li>Warped</li>
+            <li>Pixelized</li>
+            <li>Campsite</li>
+          </ul>
+          <h4>By location</h4>
+
+          <ul>
+            <li>On Speedway</li>
+
+            <li>North Campus</li>
+            <li>South Campus</li>
+          </ul>
+        </div>
+        <div class="rightsectiondiv2">
+          <p>Email:</p>
+          <input type="text" placeholder="" />
+          <p>Password:</p>
+          <input type="text" placeholder="" />
+
+          <!-- these will be uppercase, top ones are lowercase -->
+          <div class="loginandregister">
+            <button><a href="">Login</a></button>
+            <button>
+              <a
+                href="registerpage.html
+            "
+                ><p>Register</p></a
+              >
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <div class="footer-links">
+        <a href="tsw1about.html"><p>About</p></a>
+        <a href="#"><p>Contact</p></a>
+        <a href="#"><img src="logo" alt="logo" srcset="" /></a>
+        <a href="#"><p>FAQ</p></a>
+        <a href="#"><p>Terms</p></a>
+      </div>
+
+      <div class="footerbottom"><p>Thespeedway &copy; 2025</p></div>
+    </footer>
+  </body>
+</html>
