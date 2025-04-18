@@ -1,0 +1,212 @@
+
+:root {
+    --dark-navy: #10243f;
+    --light-navy: #214068;
+    --white: #ffffff;
+    --light-grey: #e5e5e5;
+    --tan: #f6a675;  }
+  
+html{
+    scroll-behavior: smooth;
+    
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    /* this removes the horizontal scroll wheel */
+    overflow-x: hidden; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centers horizontally */
+    /* align-items: center;  */
+}
+.maindiv{
+    height: 100vh;
+    width: 100vw;
+    box-sizing: border-box;
+    border: 3px solid gold;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.leftmain{
+    height: 96vh;
+    width: 68%;
+    box-sizing: border-box;
+    border: 3px solid green;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2vh 2vw;
+    /* gap between usa img and logo */
+    row-gap: 10vh;
+}
+.logodiv{
+width: 100%;
+height: 10%;
+/* border: 3px solid green; */
+display: flex;
+flex-direction: row;
+align-items: center;
+justify-content: flex-start;
+}
+.logodiv img{
+    width: 30%;
+    height: auto;
+    border: .16vw solid var(--light-navy);
+    border-radius: 16px;
+}
+.usaimage{
+    width: 90%;
+    height: 85%
+    border 3px solid yellow;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 0vh;
+}
+.usaimage img{
+    width: 80%;
+    height: auto;
+}
+.rightmain{
+    width: 28%;
+    height:96vh;
+    padding: 2vh 2vw;
+    box-sizing: border-box;
+    border: 3px solid red;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+/* commented it out for now */
+/*
+.infoentered{
+    font-family: "Roboto", Arial, Helvetica, sans-serif;
+    font-weight: 500;
+
+    display: flex;
+    flex-direction: column;
+    row-gap: 1vh;
+    align-items: flex-start;
+    justify-content: center;
+}
+.loginandregister{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    row-gap: 1vh;
+    column-gap: 1vw;
+    margin-top: 1vh;
+}
+.loginandregister button{
+    font-family: "Roboto", Arial, Helvetica, sans-serif;
+    font-weight: 500;
+
+}
+*/
+/* new code */
+
+
+.infoentered {
+    background-color: var(--light-navy);
+    padding: 2rem;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+    width: 300px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  }
+  
+  .infoentered p {
+    margin: 0;
+    font-family: "Roboto", Arial, Helvetica, sans-serif;
+
+    font-weight: 400;
+    color: var(--white);
+  }
+  
+  .infoentered input {
+    width: 86%;
+    padding: 0.7rem;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--light-grey);
+    color: #333;
+    font-size: 1rem;
+    outline: none;
+    transition: box-shadow 0.2s ease-in-out;
+  }
+  
+  .infoentered input:focus {
+    box-shadow: 0 0 0 2px var(--light-grey);
+  }
+  
+  .loginandregister {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    /* there is only one row thb */
+    row-gap: 1vh;
+    column-gap: 1vw;
+    margin-top: 2.6vh;
+  }
+  
+  .loginandregister button {
+    padding: 0.6rem 1.2rem;
+    background-color: var(--light-grey);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: "Roboto", Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    transition: background-color 0.2s ease;
+  }
+  
+  .loginandregister button:hover {
+    background-color: var(--tan);
+  }
+  
+  .loginandregister a {
+    text-decoration: none;
+    color: var(--dark-navy);
+    font-size: 1rem;
+    display: block;
+  }
+
+  .loginasguest{
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+  }
+
+  .loginasguest button {
+    padding: 0.6rem 1.2rem;
+    background-color: var(--light-grey);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: "Roboto", Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    transition: background-color 0.2s ease;
+  }
+  
+  .loginasguest button:hover {
+    background-color: var(--tan);
+  }
+  
+  .loginasguest a {
+    text-decoration: none;
+    color: var(--dark-navy);
+    font-size: 1rem;
+    display: block;
+  }

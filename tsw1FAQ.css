@@ -1,0 +1,44 @@
+
+:root {
+    --dark-navy: #10243f;
+    --light-navy: #214068;
+    --white: #ffffff;
+    --light-grey: #e5e5e5;
+    --tan: #f6a675;  }
+  
+html{
+    scroll-behavior: smooth;
+    
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    /* this removes the horizontal scroll wheel */
+    overflow-x: hidden; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centers horizontally */
+    align-items: center; /* Centers vertically */
+}
+.FAQbody{
+    border: solid 4px #153758;
+    border-radius: 1.6vw;
+    height: 97vh;
+    width: 90vw;
+    margin: 4vh 3vw 4vh 3vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.FAQbody p, li{
+    font-family: 'Roboto';
+    font-weight: 400;
+    font-size: 126%;
+}
+/* this is the about message */
+.FAQbody h1{
+    font-family: Helvetica,Arial sans-serif;
+    font-size: 226%;
+    margin: 10px 10px;
+}

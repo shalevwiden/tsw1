@@ -1,9 +1,5 @@
 
 
-
-
-
-
 footer{
     /* bottom:0; */
     display: flex;
@@ -15,8 +11,9 @@ footer{
     padding: 26px 30px; 
     gap: 0px;
     align-content: center;
-    /* gives some space */
+    /* gives some space on top */
     margin-top: 5vh;
+    /* add Barlow later */
     font-family: Helvetica ,Arial, sans-serif;
     font-size: 126%;
 }
@@ -64,5 +61,7 @@ footer p {
     margin: 1vh; 
 }
 footer img {
-    margin: 0; /* Optional: Remove margin for the image if you want it tighter */
+    margin: 0 1.3vw; /* Optional: Remove margin for the image if you want it tighter */
+    height: 56px;
+    width: auto;
 }

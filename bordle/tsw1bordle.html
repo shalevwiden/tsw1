@@ -1,47 +1,53 @@
 <!DOCTYPE html>
+<!-- Bordle Selector Page -->
+<!-- Sign in as guest  -->
+<!-- or use account -->
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>thespeedway bordle</title>
-    <link rel="stylesheet" href="bordle1.css" />
-  </head>
-  <body>
-    <div class="entirebordle">
-      <h1>Welcome to bordle</h1>
-      <p>Select your bordle below.</p>
-      <p>List of schools</p>
-
-      <p>...</p>
-      <p>...</p>
-      <p>...</p>
-      <p>What is this?</p>
-      <div class="imagebox">
-        <img id="imagedisplay" src="image1.png" alt="Guess Image" />
-      </div>
-
-      <!-- question1  -->
-      <input
-        id="imageguess"
-        type="text"
-        placeholder="Enter the 3 letters for the image"
-      />
-
-      <p id="playernotifier">Enter a guess</p>
-      <p id="playernotifier2">Your answer: <span id="resultText"></span></p>
-
-      <button id="checkimagebutton">Check Image Guess</button>
-    </div>
-
+    <link rel="stylesheet" href="tsw1bordle.css" />
     <!-- footer -->
-    <!-- footer outside of the main box -->
+    <link rel="stylesheet" href="../footer.css" />
+    <!-- school styles -->
+    <link rel="stylesheet" href="../schoolstyles/schoolstyles.css" />
+    <!-- Roboto font
+      -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <!-- the difference is the login will only have play as guest, whereas this one will have the entire school selector -->
+
+  <body>
+    <div class="maindiv">
+      <div class="leftdiv">
+        <div class="logodiv">
+          <a href="../tsw1.html"
+            ><img src="../images/rectangleswlogo.png" alt=""
+          /></a>
+        </div>
+        <div class="schoolist">
+          <a id="UT-Austin-school" href="../collegespecific/UT/UT.html"
+            >The University of Texas at Austin</a
+          >
+        </div>
+      </div>
+      <div class="rightmain"><div class="schoolselectbox"></div></div>
+    </div>
     <footer>
       <div class="footer-links">
-        <a href="tsw1about.html"><p>About</p></a>
-        <a href="tsw1contact.html"><p>Contact</p></a>
-        <a href="tsw1.html"><img src="logo" alt="logo" srcset="" /></a>
-        <a href="#"><p>FAQ</p></a>
-        <a href="#"><p>Terms</p></a>
+        <a href="../tsw1about.html"><p>About</p></a>
+        <a href="../tsw1contact.html"><p>Contact</p></a>
+        <a href="../tsw1.html"
+          ><img src="../images/logo4.png" alt="logo" srcset=""
+        /></a>
+        <a href="../tsw1FAQ.html"><p>FAQ</p></a>
+        <a href="../assets/tswterms.pdf" download="terms2025"><p>Terms</p></a>
       </div>
 
       <div class="footerbottom"><p>Thespeedway &copy; 2025</p></div>

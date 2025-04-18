@@ -3,10 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <!-- do SEO here -->
+    <title>thespeedway</title>
     <link rel="stylesheet" href="tsw1.css" />
     <!-- for the schoollist -->
-    <link rel="stylesheet" href="schoolstyles.css" />
+    <link rel="stylesheet" href="schoolstyles/schoolstyles.css" />
 
     <!-- roboto font -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -22,6 +23,7 @@
       href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="footer.css" />
   </head>
   <body>
     <div class="maintopdiv">
@@ -85,38 +87,31 @@
         <div class="rightsectiondiv1">
           <h2>Jump In</h2>
           <h3>Daily Bordle</h3>
+          <!-- If logged in, go directly to your schools bordle, if not, select what school -->
           <!-- Keep this as the main bordle page -->
           <button><a href="../bordle/tsw1bordle.html">Bordle Button</a></button>
+          <h3>Modes</h3>
           <ul>
             <li>Zoomed In</li>
-            <li>Warped</li>
+            <li>Blacked Out</li>
             <li>Pixelized</li>
-            <li>Campsite</li>
-          </ul>
-          <h4>By location</h4>
-
-          <ul>
-            <li>On Speedway</li>
-
-            <li>North Campus</li>
-            <li>South Campus</li>
           </ul>
         </div>
         <div class="rightsectiondiv2">
-          <p>Email:</p>
-          <input type="text" placeholder="" />
-          <p>Password:</p>
-          <input type="text" placeholder="" />
+          <div class="infoentered">
+            <p>Email:</p>
+            <input type="text" placeholder="Enter email adress" />
+            <p>Password:</p>
+            <input type="text" placeholder="Enter your password" />
+          </div>
 
           <!-- these will be uppercase, top ones are lowercase -->
           <div class="loginandregister">
-            <button><a href="">Login</a></button>
-            <button>
-              <a
-                href="registerpage.html
-            "
-                ><p>Register</p></a
-              >
+            <button class="loginandregisterbuttons">
+              <a href="">Login</a>
+            </button>
+            <button class="loginandregisterbuttons">
+              <a href="registerpage.html">Register</a>
             </button>
           </div>
         </div>
@@ -126,10 +121,10 @@
     <footer>
       <div class="footer-links">
         <a href="tsw1about.html"><p>About</p></a>
-        <a href="#"><p>Contact</p></a>
-        <a href="#"><img src="logo" alt="logo" srcset="" /></a>
-        <a href="#"><p>FAQ</p></a>
-        <a href="#"><p>Terms</p></a>
+        <a href="tsw1contact.html"><p>Contact</p></a>
+        <a href="#"><img src="images/logo4.png" alt="logo" srcset="" /></a>
+        <a href="tsw1FAQ.html"><p>FAQ</p></a>
+        <a href="assets/tswterms.pdf" download="terms2025"><p>Terms</p></a>
       </div>
 
       <div class="footerbottom"><p>Thespeedway &copy; 2025</p></div>

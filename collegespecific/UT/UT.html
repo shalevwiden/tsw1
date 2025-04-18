@@ -4,34 +4,130 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>UT's speedway</title>
+    <!-- styles for this page -->
+    <link rel="stylesheet" href="utcssdocs/UT.css" />
+    <!-- heading styles -->
+    <link rel="stylesheet" href="../../schoolstyles/schoolheadings.css" />
+    <!-- Barlow Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- roboto font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../../footer.css" />
   </head>
+
   <body>
-    <h1>UT's page</h1>
+    <h1>
+      <span id="UTheading">The University of Texas at Austin's</span> speedway
+    </h1>
     <div class="maindiv">
       <div class="leftnav">
         <!-- I think the bordle will just be the homepage -->
-        <a href="UT/utbordle.html" class="navelements">Bordle</a
-        ><a href="" class="navelements">Identify Segment</a
+        <a href="UT/utbordle.html" class="navelements">Daily</a
+        ><a href="" class="navelements">Segment</a
         ><a href="" class="navelements">Pixelated</a>
+        <a href="">By Campus Location</a>
+        <a href="buildingsearchUT.html">Building Search</a>
+        <a href="utleaderboard.html">Campus Leaderboard</a>
         <!-- have it so that when you change the page the nav is the same across the pages  -->
         <!-- and only the rightside div and its content changes -->
       </div>
-      <div class="rightsidediv">
-        <h2>Bordle</h2>
+      <!-- I actually think that the getcode part could be part of the nav ngl-->
+      <!-- that could be cool -->
+      <!-- enter in a stat and get one back both ways -->
+      <!-- the actual minigame part  -->
+      <div class="rightdiv">
+        <!-- this stuff is in the right div -->
+        <h2>Daily Bordle</h2>
+        <!-- for the images we will have URL's from AWS -->
+        <div id="bordleimagediv">
+          <img src="utimages/welch1.jpg" alt="rip" id="bordleimage" />
+        </div>
+        <button id="imagechangebutton">ChangeImage for testing</button>
+        <!-- this is the guess stuff now -->
+        <div class="guessdiv">
+          <!-- left -->
+          <div class="leftguessdiv">
+            <p>Enter a guess for the building name</p>
+            <div class="inputandbuttondiv">
+              <input
+                type="text"
+                placeholder="Enter the name"
+                id="bldnameguess"
+              />
+              <button id="checkbldnamebutton">Check name</button>
+            </div>
+          </div>
+          <!-- right -->
+          <div class="rightguessdiv">
+            <p>Enter a guess for the building code</p>
+            <div class="inputandbuttondiv">
+              <input
+                type="text"
+                placeholder="Enter the code"
+                id="bldcodeguess"
+              />
+              <button id="checkbldcodebutton">Check code</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- this div should have everything related to the guesssing functionality -->
+        <div class="functionaldiv">
+          <div class="attemptsandscorediv">
+            <p id="attempts">Attempts:</p>
+            <p id="score">Score:</p>
+          </div>
+          <div class="notifier_and_displayanswer_div">
+            <!-- Notifier if incorrect or correct -->
+            <!-- referenced in the JS -->
+            <div class="notifierdiv">
+              <p id="notifier">That is ___</p>
+              <p>notifierdiv</p>
+            </div>
+
+            <div class="displayanswerdiv">
+              <p id="displayanswer">Building Name - Building Code</p>
+            </div>
+          </div>
+        </div>
+        <div class="resources">
+          <div class="resourcescontent">
+            <p>
+              Find a buildings code <a href="buildingsearchUT.html">here</a>
+            </p>
+            <a href=""><p>Campus Map</p></a>
+          </div>
+        </div>
       </div>
     </div>
 
     <!-- footer -->
+
+    <!-- script -->
     <footer>
       <div class="footer-links">
-        <a href="tsw1about.html"><p>About</p></a>
-        <a href="tsw1contact.html"><p>Contact</p></a>
-        <a href="tsw1.html"><img src="logo" alt="logo" srcset="" /></a>
-        <a href="#"><p>FAQ</p></a>
-        <a href="#"><p>Terms</p></a>
+        <a href="../../tsw1about.html"><p>About</p></a>
+        <a href="../../tsw1contact.html"><p>Contact</p></a>
+        <a href="../../tsw1.html"
+          ><img src="../../images/logo4.png" alt="logo" srcset=""
+        /></a>
+        <a href="../../tsw1FAQ.html"><p>FAQ</p></a>
+        <a href="../../assets/tswterms.pdf"><p>Terms</p></a>
       </div>
 
       <div class="footerbottom"><p>Thespeedway &copy; 2025</p></div>
     </footer>
+    <script src="UTbordle.js"></script>
   </body>
 </html>

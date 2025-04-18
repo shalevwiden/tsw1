@@ -1,0 +1,250 @@
+html{
+
+
+    scroll-behavior: smooth;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: Helvetica, Arial, sans-serif;
+
+}
+
+.maindiv{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    border: 3px solid black;
+    height: 136vh;
+    width: 90vw;
+    padding:1vh 1vw
+}
+.leftnav{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    font-weight: bold;
+    font-family: "Barlow", sans-serif;
+    width: 19%;
+    height: 95%;
+    border: 3px solid black;
+    padding: 10vh 1vw;
+    /* gap between the elements */
+    row-gap: 6vh;
+    /* makes the size more standard */
+    box-sizing: border-box;
+
+
+}
+.leftnav a{
+    text-decoration: none;
+    color: #0b3667;
+    padding: 2vh 2vw;
+    border: 1px solid black;
+    box-sizing: content-box;
+    font-size: 3.2vh;
+    border-radius: 2vh;
+    
+}
+.leftnav a:hover{
+    text-decoration: underline;
+}
+
+.rightdiv{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* aligns items at the top */
+    justify-content: flex-start;
+    font-family: Helvetica, Arial, sans-serif;
+    width: 80%;
+    height: 95%;
+    border: 3px solid green;
+    /* padding: 1vh 1vw; */
+    box-sizing: border-box; 
+    
+
+}
+#bordleimagediv{
+    height: 60vh;
+    /* rightdiv is 72 vw */
+    width: 60vw;
+    border: 3px solid black
+}
+/* this bordleimage is inside rightdiv */
+/* slightly less width */
+#bordleimage{
+width: 59vw;
+height: 59vh;
+}
+
+#checkguessbutton{
+    color: #0b3667;
+    border:3px solid #12345c;
+    background-color: rgb(243, 240, 240);
+    margin: 1vh 1vw;
+    height: 7.6vh;
+    width: 15vw;
+}
+.functionaldiv{
+
+    width: 60vw;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    border: 3px solid red;
+
+}
+
+.attemptsandscorediv{
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    border: 3px solid green;
+    /* how do I change this so the site is more responsive */
+    box-sizing: border-box;
+    padding-left: .6vw;
+}
+
+.notifier_and_displayanswer_div{
+    width: 70%;
+    border: 3px solid green;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+#displayanswer{
+    color: navy;
+}
+#notifier{
+    color: #0b3667;
+    display: none;
+}
+
+/* this has guesscheck and building check in it */
+.mainguessdiv{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    font-family: Helvetica, Arial, sans-serif;
+    width: 95%;
+    height: 30%;
+    border: 3px solid orange;
+    padding: 1vh 1vw;
+    box-sizing: border-box; 
+    font-size: clamp(1.1vh, 3vh, 4vh);
+}
+/* check guess */
+.guesscheckdiv{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: Helvetica, Arial, sans-serif;
+    /* 80% of parent element */
+    font-size: .6em;
+
+    width: 95%;
+    height: 60%;
+    border: 3px solid blue;
+    padding: 1vh 1vw;
+    box-sizing: border-box; 
+    row-gap: 1vh;
+    column-gap: 1vw;
+}
+/* this is where you can enter a name and get a code */
+.buildingcheckdiv{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: Helvetica, Arial, sans-serif;
+    width: 95%;
+    height: 60%;
+    font-size: .6em;
+
+    border: 3px solid blue;
+    padding: 1vh 1vw;
+    box-sizing: border-box; 
+    text-align: center;
+    row-gap: 1vh;   /* Space between rows */
+    column-gap: 1vw; 
+    margin: 0;
+}
+
+
+
+
+footer{
+    /* bottom:0; */
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+    /* this padding applies to thefooter not the elements in the footer */
+    padding: 26px 30px; 
+    gap: 0px;
+    align-content: center;
+    /* gives some space */
+    margin-top: 5vh;
+    font-family: Helvetica ,Arial, sans-serif;
+    font-size: 126%;
+}
+.footer-links{
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+
+}
+
+/* adjust lineheight:
+ */
+ /* nah actually the cause was unnecessary padding fixed that */
+
+.footerbottom{
+    padding: 0;
+    /* slightly bigger font size */
+    font-size: 106%;
+}
+
+footer a{
+text-decoration: none;
+color: #12345c;
+}
+.footer-links a:visited {
+    color: #12345c; 
+    text-decoration: none;
+}
+
+.footer-links a:hover{
+    cursor: pointer;
+    color: #12345c;
+    text-decoration: underline; 
+    text-decoration-thickness: 4px; /* Makes underline thicker */
+    /* Adjusts the space between text and underline */
+    text-underline-offset: .26vh; 
+}
+
+footer p {
+    margin: 1vh; 
+}
+footer img {
+    margin: 0; /* Optional: Remove margin for the image if you want it tighter */
+}

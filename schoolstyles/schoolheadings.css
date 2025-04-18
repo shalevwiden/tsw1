@@ -1,0 +1,16 @@
+/* this is the headings on each of their bordle pages */
+/* as in where the actual building guessing takes place */
+
+#UTheading{
+    text-decoration: underline;
+    text-decoration-color: #BF5700;
+    text-underline-offset: 1vh; 
+    text-decoration-thickness: .76vh; /* Make it bolder if needed */
+}
+
+/* harvard heading */
+/* Yale heading */
+
+/* Rice heading
+ */
+/* I may not have been to harvard, but I've certainly been to their campus...digitally  */

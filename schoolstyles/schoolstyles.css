@@ -2,10 +2,11 @@
 
 /* general school list stuff */
 .schoolist a{
-    font-family: Helvetica,Arial, sans-serif;
+    font-family: "Roboto",Helvetica,Arial, sans-serif;
     font-weight: bold;
-    font-size: 126%;
     color: black;
+    /* font size is controlled in each documents individual css */
+    
 
 }
 .schoolist a:visited {
@@ -15,8 +16,6 @@
 
 /* specific schools here */
 #UT-Austin-school{
-    font-size: 110%;
-    font-weight: bold;
     text-decoration: none;
 
 }

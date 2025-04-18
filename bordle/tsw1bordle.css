@@ -1,0 +1,83 @@
+/* this is where I watch the tutorial to see how to make a grid and flexbox layout I'm not gonna lie */
+
+:root {
+    --dark-navy: #10243f;
+    --light-navy: #214068;
+    --white: #ffffff;
+    --light-grey: #e5e5e5;
+    --tan: #f6a675;  }
+  
+html{
+    scroll-behavior: smooth;
+    
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    /* this removes the horizontal scroll wheel */
+    overflow-x: hidden; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centers horizontally */
+    align-items: center; /* Centers vertically */
+}
+
+/* .maindiv{} dont need this yet I guess */
+
+/* leftdiv has logo div and schoolist */
+.leftdiv{
+    margin-top: 2.6vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    border: 3px solid red;
+    height: 90vh;
+    width: 90vw;
+    column-gap: 2.6vh;
+    padding: 1vh 1vw;
+}
+.logodiv{
+    width: 26%;
+    height: 10%;
+    align-self: flex-start;
+
+
+}
+.logodiv img{
+        width: 100%;
+        height: auto;
+        border: .16vw solid var(--light-navy);
+        border-radius: 16px;
+        z-index: 1;
+    
+}
+
+
+.schoolist{
+    /* this should be a good set up to add a ton more schools in the future. */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 0% 10%;
+    border: 3px solid  #153758;
+    width: 70%;
+    /* gap between the school names */
+    column-gap: .75vw;
+    row-gap: 0;
+
+    height: 90vh;
+    flex-wrap: wrap;
+    align-content: center;
+    border-radius: 1.6vw;
+    box-sizing: border-box;
+}
+.schoolist a{
+    font-weight: bold;
+    font-size: 156%;
+    
+
+}
+

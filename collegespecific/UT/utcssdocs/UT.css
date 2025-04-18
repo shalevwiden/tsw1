@@ -1,0 +1,296 @@
+html{
+
+
+    scroll-behavior: smooth;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: Helvetica, Arial, sans-serif;
+
+}
+
+.maindiv{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    border: 3px solid black;
+    height: 156vh;
+    width: 90vw;
+    padding:1vh 1vw
+}
+.leftnav{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    font-weight: bold;
+    font-family: "Barlow", sans-serif;
+    width: 19%;
+    height: 95%;
+    border: 3px solid black;
+    padding: 10vh 1vw;
+    /* gap between the elements */
+    row-gap: 6vh;
+    /* makes the size more standard */
+    box-sizing: border-box;
+
+
+}
+.leftnav a{
+    text-decoration: none;
+    color: #0b3667;
+    padding: 2vh 2vw;
+    border: 1px solid black;
+    box-sizing: content-box;
+    font-size: 2.6vh;
+    border-radius: 2vh;
+    
+}
+.leftnav a:hover{
+    text-decoration: underline;
+    text-decoration-thickness: 4px; /* Makes underline thicker */
+    /* Adjusts the space between text and underline */
+    text-underline-offset: .26vh; 
+}
+
+.rightdiv{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* aligns items at the top */
+    justify-content: flex-start;
+    font-family: Helvetica, Arial, sans-serif;
+    width: 80%;
+    height: 95%;
+    border: 3px solid green;
+    /* padding: 1vh 1vw; */
+    box-sizing: border-box; 
+    
+
+}
+#bordleimagediv{
+    height: 67vh;
+    /* rightdiv is 72 vw */
+    width: 60vw;
+    border: 3px solid black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+/* this bordleimage is inside rightdiv */
+#bordleimage{
+    max-width: 100%;  /* Set max width to fit the container */
+    max-height: 100%; /* Set max height to fit the container */
+    /* this one actually works its fire. */
+    object-fit: cover;
+}
+
+.guessdiv{
+    border: 3px solid orange;
+    width: 60vw;
+    height: 10%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    column-gap: 2.6vw;
+
+}
+
+/* these are in guess div */
+
+.rightguessdiv, .leftguessdiv{
+    display: flex;
+    flex-direction: column;
+    border: 3px solid blue;
+    align-items: center;
+    justify-content: center;
+    width: 40%;
+    font-family: "Roboto";
+    font-weight: 500;
+
+
+
+}
+.inputandbuttondiv{
+    border: 2px solid red;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    column-gap: 1vw;
+}
+#checkguessbutton{
+    color: #0b3667;
+    border:3px solid #12345c;
+    background-color: rgb(243, 240, 240);
+    margin: 1vh 1vw;
+    height: 7.6vh;
+    width: 15vw;
+}
+
+/* guess div in similar to this one */
+.functionaldiv{
+
+    width: 60vw;
+    height: 16%;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    border: 3px solid rgb(64, 20, 114);
+
+}
+
+.attemptsandscorediv{
+    width: 30%;
+    height: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    border: 3px solid green;
+    /* how do I change this so the site is more responsive */
+    padding-top: .5vh;
+    padding-bottom: .5vh;
+    box-sizing: border-box;
+    padding-left: .6vw;
+}
+
+.notifier_and_displayanswer_div{
+    width: 70%;
+    border: 3px solid green;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    row-gap: 1vh;
+    box-sizing: border-box;
+
+}
+
+.displayanswerdiv, .notifierdiv{
+    height: 30%;
+    width: 100%;
+    display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    box-sizing: border-box;
+    border: 3px solid #12345c;
+    border-radius: 2.6vh;
+
+}
+#displayanswer{
+    color: navy;
+}
+.notifierdiv{
+color: darkblue;
+}
+
+#notifier{
+    color: #0b3667;
+    display: none;
+}
+
+/* this has the building code getter and campus map in it */
+.resources{
+    width: 60vw;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin: 2.6vh 0;
+}
+.resourcescontent{
+    width: 20vw;
+    display: flex;
+        flex-direction: column;
+        /* move to the right horizontally */
+        align-items: flex-end;
+        justify-content: center;
+        padding: 1vh 1vw;
+    box-sizing: border-box;
+    border: 3px solid #12345c;
+    border-radius: 2.6vh;
+
+}
+.resourcescontent a{
+    color: #12345c;
+    font-family: Helvetica, Arial, sans-serif;
+    text-decoration: none;
+
+}
+.resourcescontent a:hover{
+    text-decoration: underline;
+    text-decoration-thickness: 2.6px; /* Makes underline thicker */
+    /* Adjusts the space between text and underline */
+    text-underline-offset: .26vh; 
+}
+
+
+footer{
+    /* bottom:0; */
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+    /* this padding applies to thefooter not the elements in the footer */
+    padding: 26px 30px; 
+    gap: 0px;
+    align-content: center;
+    /* gives some space */
+    margin-top: 5vh;
+    font-family: Helvetica ,Arial, sans-serif;
+    font-size: 126%;
+}
+.footer-links{
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+
+}
+
+/* adjust lineheight:
+ */
+ /* nah actually the cause was unnecessary padding fixed that */
+
+.footerbottom{
+    padding: 0;
+    /* slightly bigger font size */
+    font-size: 106%;
+}
+
+footer a{
+text-decoration: none;
+color: #12345c;
+}
+.footer-links a:visited {
+    color: #12345c; 
+    text-decoration: none;
+}
+
+.footer-links a:hover{
+    cursor: pointer;
+    color: #12345c;
+    text-decoration: underline; 
+    text-decoration-thickness: 4px; /* Makes underline thicker */
+    /* Adjusts the space between text and underline */
+    text-underline-offset: .26vh; 
+}
+
+footer p {
+    margin: 1vh; 
+}
+footer img {
+    margin: 0; /* Optional: Remove margin for the image if you want it tighter */
+}

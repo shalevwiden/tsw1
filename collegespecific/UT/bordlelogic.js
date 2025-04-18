@@ -52,3 +52,5 @@ setInterval(() => {
         resetGame();
     }
 }, 60000); // Check every 60 seconds
+
+

@@ -1,6 +1,7 @@
 // this will be the script for the longer playing one, and slightly modified for the daily one.
 
 // I need to make sure the images are the same size
+// Review this one:
 
 
 
