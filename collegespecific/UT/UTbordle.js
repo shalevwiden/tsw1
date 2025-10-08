@@ -10,13 +10,21 @@ const images= [
         buildinganswer:"welch", 
         buildingcode:"wel"
     },
-    {beforesrc: "../../../thespeedway/BuildingImages/UT/Zoomed/Welch/Welch1Zoomed1.png"
-            ,aftersrc:"../../../thespeedway/BuildingImages/UT/Zoomed/Welch/welch1.jpg"
+    {beforesrc: "https://utzoomedimages.s3.us-east-2.amazonaws.com/jester1zoomed1.png"
+            ,aftersrc:"https://utzoomedimages.s3.us-east-2.amazonaws.com/jester.1jpg.jpg"
             , 
             buildinganswer:"jester"
             , 
             buildingcode:"jes"
-    }
+    },
+    {beforesrc: "https://utzoomedimages.s3.us-east-2.amazonaws.com/gdczoomed.png"
+        ,aftersrc:"https://utzoomedimages.s3.us-east-2.amazonaws.com/GDC.jpg"
+        , 
+        buildinganswer:"gates dell center"
+        , 
+        buildingcode:"gdc"
+}
+
 
 
 
@@ -102,15 +110,61 @@ function checkBldname(){
 let bldcheckbutton=document.getElementById('checkbldnamebutton')
 bldcheckbutton.addEventListener('click',checkBldname)
 
+// establish the checkCode function to be used in the for loop
+function checkCode(coderoundguess){
+    // for now it will be simple
+    if(coderoundguess===images[currentRound].buildingcode){
+        return true;
+    }
+    return false;
+}
+let codecheckbutton=document.getElementById('checkbldcodebutton')
 
-// logic now
+// get the round notifier
+let roundnotifier=document.getElementById('roundnotifier')
+// logic now- assign it to the guess code.
+// this for loop will run 5 times and increment round each time
+function playGame(){
+    for (let round = 0; round < 3; round++) {
+        gameImage.src= images[round].beforesrc;
+        roundnotifier.textContent=`Round ${round}`;
+        let attempts=3;
+        attemptsElement.textContent=`${attempts}`
+
+        // reset attempts to 3 for every round
+
+        // Listen for the button click for each round
+        codecheckbutton.addEventListener('click', function() {
+            let codeuserguess = document.getElementById('bldcodeguess').value.trim().toLowerCase();
+
+            if (checkCode(codeuserguess)) {
+                gameImage.src = images[round].aftersrc;
+                notifier.style.display = 'block';
+                notifier.textContent = 'Correct, moving to next round';
+                return; // Exit the round after correct answer
+            } else {
+                attempts--;
+                attemptsElement.textContent = `${attempts}`;
+                if (attempts > 0) {
+                    notifier.style.display = 'block';
+                    notifier.textContent = 'Incorrect, try again';
+                } else {
+                    notifier.style.display = 'block';
+                    notifier.textContent = 'Out of attempts, going to next round.';
+                    return; // Exit the round after attempts run out
+                }
+            }
+        });
+    }
+}
+// playgame button
+let playgame=document.getElementById('playgame')
+playgame.addEventListener('click', playGame)
 
 
 
-attempts-=1
-        attemptsElement.innerText="Attempts: "+attempts;
-        notifier.style.display='block';
-        notifier.textContent='Wrong, try again.'
+
+
 
     // add the for and while loop stuff from searching.py
 

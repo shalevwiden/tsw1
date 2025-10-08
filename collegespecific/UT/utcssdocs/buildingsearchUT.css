@@ -1,0 +1,41 @@
+body{
+    font-family: Helvetica, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.maindiv{
+    width: 90%;
+    height: 100vh;
+    border: 1vh solid #153758;
+    border-radius: 3vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 2vh 2vw;
+    box-sizing: border-box;
+    column-gap: 2.6vw;
+}
+.buildingcheckdiv{
+width: 40%;
+border: .5vh solid #153758;
+border-radius: 1vh;
+}
+
+.campusmapdiv{
+width: 50%;
+height: 80vh;
+border: .5vh solid #153758;
+border-radius: 1vh;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+.campusmapdiv img{
+    max-width: 90%;
+    height: auto;
+}

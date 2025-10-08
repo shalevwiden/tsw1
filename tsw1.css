@@ -1,378 +1,349 @@
-
 /* define variables */
 :root {
-    --dark-navy: #10243f;
-    --light-navy: #214068;
-    --white: #ffffff;
-    --light-grey: #e5e5e5;
-    --tan: #f6a675;  }
-html{
-    scroll-behavior: smooth;
-    
+  --dark-navy: #10243f;
+  --light-navy: #214068;
+  --white: #ffffff;
+  --light-grey: #e5e5e5;
+  --tan: #f6a675;
+}
+html {
+  scroll-behavior: smooth;
 }
 
-body{
-    margin: 0;
-    padding: 0;
-    /* this removes the horizontal scroll wheel */
-    overflow-x: hidden; 
+body {
+  margin: 0;
+  padding: 0;
+  /* this removes the horizontal scroll wheel */
+  overflow-x: hidden;
 }
 
 /* this is the maintopdiv of the image */
-.maintopdiv{
-    display: flex;
-    flex-direction: row;
-    /* aligning the rows to the right */
-    justify-content: flex-end;
-    border: 3px solid coral;
-    height: 21vh;
-    margin: .25vh 1.6vh .5vh 1.6vh;
-    /* add background image now */
+.maintopdiv {
+  display: flex;
+  flex-direction: row;
+  /* aligning the rows to the right */
+  justify-content: flex-end;
+  border: 3px solid coral;
+  height: 21vh;
+  margin: 0.25vh 1.6vh 0.5vh 1.6vh;
+  /* add background image now */
 
-    /* need position relative in the main for the children to be position absolute */
-    position: relative;
-    overflow: hidden;
-    
-   
-
+  /* need position relative in the main for the children to be position absolute */
+  position: relative;
+  overflow: hidden;
 }
 
 /* .maintopdiv::before */
 .topdivimage {
-    position: absolute;
-    top: 0;
-    /* update all these values from px to vh vw */
-    left: -50px; /* Spills out on the left */
-    margin-left: -167px;
-    width: 1000px;
-    height: 180px;
-    background-image: url('images/tswbanner6removed.png');
-    background-position: left;
-    background-size: cover;
-    background-repeat: no-repeat;
-    /* this z index puts it in front of other content */
-    z-index: 1; 
+  position: absolute;
+  top: 0;
+  /* update all these values from px to vh vw */
+  left: -50px; /* Spills out on the left */
+  margin-left: -167px;
+  width: 1000px;
+  height: 180px;
+  background-image: url("images/tswbanner6removed.png");
+  background-position: left;
+  background-size: cover;
+  background-repeat: no-repeat;
+  /* this z index puts it in front of other content */
+  z-index: 1;
 }
 /* I changed it to images to comment it out */
 
+.topdivtext {
+  display: flex;
+  flex-direction: column;
+  /* change to flex end later */
 
+  /* Horizontal alignment when column */
+  /* aligning them to the right */
+  align-items: flex-end;
+  /* vertical alignment when column */
+  /* aligning center */
+  justify-content: center;
+  border: 0.25vw solid rgb(103, 122, 111);
+  width: calc(60vw - 0.5vw);
+  height: 21vh;
+  row-gap: 1vh;
+  background: linear-gradient(to left, #0a335d 50%, white);
+  mix-blend-mode: overlay;
+  z-index: 0;
+  box-sizing: border-box;
+  padding-bottom: 2.6vh;
 
-.topdivtext{
-    display: flex;
-    flex-direction: column;
-    /* change to flex end later */
-
-            /* Horizontal alignment when column */
-/* aligning them to the right */
-    align-items: flex-end;
-    /* vertical alignment when column */
-/* aligning center */
-    justify-content: center;
-    border: .25vw solid rgb(103, 122, 111);
-    width: calc(60vw - .5vw);   
-    height: 21vh; 
-    row-gap: 1vh;
-    background: linear-gradient(to left, #0a335d 50%, white);
-    mix-blend-mode: overlay;
-    z-index: 0;
-    box-sizing: border-box;
-    padding-bottom: 2.6vh;
-    
-
-/* old background where its transparent */
-    /* background-color: rgba(255, 255, 255, 0); */
-    /* margin-left: 50vw; */
+  /* old background where its transparent */
+  /* background-color: rgba(255, 255, 255, 0); */
+  /* margin-left: 50vw; */
 }
 
-    .topdivtext h1{
-        font-weight: bold;
-        font-family: "Barlow", sans-serif;
-        font-size: 600%;
-        margin-bottom: 0;
-        margin-top: 2.6vh;
-        color: #ffffff;
-        margin-right: 6vw; 
-
-
-    }
-
-    /* the login, register, and about underneath the heading */
-
-
-    
-    .underneathheading{
-    display: flex;
-    flex-direction: row;
-    align-items: flex-end;
-    justify-content: flex-start;
-    margin-right: 10.26vw;
-    column-gap: 1vw;
-    height: 26%;
-    margin-top: 0;
-    
-
-    }
-
-    .underneathheading p{
-        font-size: 126%;
-        font-family: Helvetica, Arial, sans-serif;
-    }
-
-    .underneathheading a{
-        color: rgb(255, 255, 255);
-        text-decoration: none;
-    }
-    .underneathheading a:visited{
-        color: rgb(255, 255, 255); 
-        text-decoration: none;
-    }
-    .underneathheading a:hover{
-        text-decoration: underline;
-        text-decoration: underline; 
-        /* Makes underline thicker */
-    text-decoration-thickness: 4px; 
-    /* Adjusts the space between text and underline */
-    text-underline-offset: .26vh; 
-    }
-
-    #underneathheadinglogin:hover{
-        text-underline-offset: .3vh; 
-
-    }
-    
-    #underneathheadingregister:hover{
-        text-underline-offset: .3vh; 
-
-    }
-
-
-    /* main div that holds everything in the body */
-.maindiv{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    height: 100vh;
-    width: 98.5vw;
+.topdivtext h1 {
+  font-weight: bold;
+  font-family: "Barlow", sans-serif;
+  font-size: 600%;
+  margin-bottom: 0;
+  margin-top: 2.6vh;
+  color: #ffffff;
+  margin-right: 6vw;
 }
-.leftsection{
-    width: 65%;
-    height: 90vh;
-    display: flex;
-    justify-content: center;
-    /* flex-direction: row; */
-    flex-wrap: wrap;
-    gap: .5vw;
 
-    /* here I made the right value bigger to account for margin squishing */
-    margin: 1vh .5vw 1vh 2.6vw;
-    box-sizing: border-box;
+/* the login, register, and about underneath the heading */
+
+.underneathheading {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: flex-start;
+  margin-right: 10.26vw;
+  column-gap: 1vw;
+  height: 26%;
+  margin-top: 0;
+}
+
+.underneathheading p {
+  font-size: 126%;
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+.underneathheading a {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+}
+.underneathheading a:visited {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+}
+.underneathheading a:hover {
+  text-decoration: underline;
+  text-decoration: underline;
+  /* Makes underline thicker */
+  text-decoration-thickness: 4px;
+  /* Adjusts the space between text and underline */
+  text-underline-offset: 0.26vh;
+}
+
+#underneathheadinglogin:hover {
+  text-underline-offset: 0.3vh;
+}
+
+#underneathheadingregister:hover {
+  text-underline-offset: 0.3vh;
+}
+
+/* main div that holds everything in the body */
+.maindiv {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  height: 100vh;
+  width: 98.5vw;
+}
+.leftsection {
+  width: 65%;
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  /* flex-direction: row; */
+  flex-wrap: wrap;
+  gap: 0.5vw;
+
+  /* here I made the right value bigger to account for margin squishing */
+  margin: 1vh 0.5vw 1vh 2.6vw;
+  box-sizing: border-box;
 }
 /* the following is in leftsection div */
 
+.centraldiv {
+  display: flex;
+  width: 95%;
+  height: 96.4vh;
+  background-color: rgb(255, 255, 255);
+  border: 4px solid #153758;
+  border-top: 2vh solid #153758;
+  flex-direction: column;
+  align-items: center;
+  padding: 1vh 3vw;
 
-
-.centraldiv{
-    display: flex;
-    width: 95%;
-    height: 96.4vh;
-    background-color: rgb(255, 255, 255);
-    border: 4px solid #153758;
-    border-top: 2vh solid #153758;
-    ;
-    flex-direction: column;
-    align-items: center;
-    padding: 1vh 3vw;
-    
-    border-radius: 2.6vh;
-    box-shadow: 0px 0px 26px 5px rgba(0, 0, 0, 0.15); 
-
+  border-radius: 2.6vh;
+  box-shadow: 0px 0px 26px 5px rgba(0, 0, 0, 0.15);
 }
 /* this is in central div */
-.welcomemessage{
-    font-family: Helvetica,Arial sans-serif;
-    font-size: 156%;
-    margin: 10px 10px;
-    padding: 1vh 2vw;
-    border: 3px solid black
+.welcomemessage {
+  font-family: Helvetica, Arial sans-serif;
+  font-size: 156%;
+  margin: 10px 10px;
+  padding: 1vh 2vw;
+  border: 3px solid black;
 }
 
 /* p's in central div */
-.centraldiv p{
-    font-family: "Roboto", Helvetica, sans-serif;
-    font-size: 126%;
-    font-weight: 400;
+.centraldiv p {
+  font-family: "Roboto", Helvetica, sans-serif;
+  font-size: 126%;
+  font-weight: 400;
 }
-
 
 /* also in central div */
-.schoolist{
-    /* this should be a good set up to add a ton more schools in the future. */
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    padding: 0% 10%;
-    border: 3px solid  #153758;
-    width: 70%;
-    /* gap between the school names */
-    column-gap: .75vw;
-    row-gap: 0;
+.schoolist {
+  /* this should be a good set up to add a ton more schools in the future. */
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 0% 10%;
+  border: 3px solid #153758;
+  width: 70%;
+  /* gap between the school names */
+  column-gap: 0.75vw;
+  row-gap: 0;
 
-    height: 30vh;
-    flex-wrap: wrap;
-    align-content: center;
-    margin-bottom: 1vh;
-    border-radius: 1.6vw;
+  height: 30vh;
+  flex-wrap: wrap;
+  align-content: center;
+  margin-bottom: 1vh;
+  border-radius: 1.6vw;
 }
-.schoolist p{
-    font-weight: bold;
-    font-size: 110%;
-
+.schoolist p {
+  font-weight: bold;
+  font-size: 110%;
 }
-.schoolist a{
-    font-size: 126%;
-
+.schoolist a {
+  font-size: 126%;
 }
 /* refer to school styles css for individual school names styles */
 /* schoolstyles.css */
 
+.rightsection {
+  width: 30%;
+  height: 90vh;
+  display: flex;
+  flex-direction: column; /* Stack divs vertically */
+  /* Horizontal alignment when column */
+  /* flex end aligns to the right */
+  align-items: flex-end;
+  /* vertical alignment when column */
+  justify-content: center;
+  gap: 2vw;
 
+  border: 4px solid #103357;
+  border-top: 2vh solid #153758;
 
-
-.rightsection{
-        width: 30%;
-        height: 90vh;
-        display: flex;
-        flex-direction: column; /* Stack divs vertically */
-        /* Horizontal alignment when column */
-        /* flex end aligns to the right */
-        align-items: flex-end;
-        /* vertical alignment when column */
-        justify-content: center;
-        gap: 2vw;
-
-        border: 4px solid #103357;
-        border-top: 2vh solid #153758;
-
-
-        background: #ffffff;
-        padding: 4vh 3vw;
-        margin: 1vh 1.95vw 1vh .65vw;
-        border-radius: 2.6vh;
-        box-shadow: 0px 0px 20px 6px rgba(0, 0, 0, 0.15);
-        box-sizing: border-box;
-
+  background: #ffffff;
+  padding: 4vh 3vw;
+  margin: 1vh 1.95vw 1vh 0.65vw;
+  border-radius: 2.6vh;
+  box-shadow: 0px 0px 20px 6px rgba(0, 0, 0, 0.15);
+  box-sizing: border-box;
 }
 
 /* rightsectiondiv1 has the gamemodes */
 
-.rightsectiondiv1{
-    height: 50vh;
-    width: 70%;
-    padding: 1vh 3vw;
-    background-color: white;
-    border: 3px solid #132f57;
-    margin-right: .5vw;
-    color: rgb(0, 0, 0);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    font-family: "Roboto", Helvetica, sans-serif;
-    font-weight: 400;
-    border-radius: 1.6vw;
-
+.rightsectiondiv1 {
+  height: 50vh;
+  width: 70%;
+  padding: 1vh 3vw;
+  background-color: white;
+  border: 3px solid #132f57;
+  margin-right: 0.5vw;
+  color: rgb(0, 0, 0);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  font-family: "Roboto", Helvetica, sans-serif;
+  font-weight: 400;
+  border-radius: 1.6vw;
 }
 
 /* In HTML this says jump right in */
-.rightsectiondiv1 h2{
-    font-family: Arial, Helvetica, sans-serif;
-    text-align: center;
+.rightsectiondiv1 h2 {
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
 }
 
-.rightsectiondiv1 h3{
-    font-family: Arial, Helvetica, sans-serif;
-    text-align: center;
+.rightsectiondiv1 h3 {
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
 }
 
 /* rightsectiondiv2 has the login info */
-.rightsectiondiv2{
-    display: flex;
-    flex-direction: column;
-    /* this aligns the register and login text */
-    align-items: center;
-    /* when column this means at the bottom or at the top */
-    justify-content: center;
-    height: 40vh;
-    width: 50%;
-    margin-right: .5vw;
-    background-color: var(--light-navy);
-    border: 3px solid var(--dark-navy);
-    padding: 0% 4%;
-    /* this aligns the box itself */
-    align-self: flex-end;
-    /* text color */
-    color: white;
-    border-radius: 1.6vw;
-    font-family:"Roboto",Helvetica, sans-serif ;
-    font-weight: 500;
+.rightsectiondiv2 {
+  display: flex;
+  flex-direction: column;
+  /* this aligns the register and login text */
+  align-items: center;
+  /* when column this means at the bottom or at the top */
+  justify-content: center;
+  height: 40vh;
+  width: 50%;
+  margin-right: 0.5vw;
+  background-color: var(--light-navy);
+  border: 3px solid var(--dark-navy);
+  padding: 0% 4%;
+  /* this aligns the box itself */
+  align-self: flex-end;
+  /* text color */
+  color: white;
+  border-radius: 1.6vw;
+  font-family: "Roboto", Helvetica, sans-serif;
+  font-weight: 500;
 }
 
 /* spaces between the elements in rightsectiondiv2 */
-.rightsectiondiv2 p, input{
-    margin: 1vh 0;
+.rightsectiondiv2 p,
+input {
+  margin: 1vh 0;
 }
-.rightsectiondiv2 input{
+.rightsectiondiv2 input {
 }
 
-.infoentered{
-    /* border: 1px solid white; */
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;
-    width: 90%;
-    box-sizing: border-box;
+.infoentered {
+  /* border: 1px solid white; */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  width: 90%;
+  box-sizing: border-box;
 }
 
 /*  */
 /* loginandregister div is in right section2 */
-.loginandregister{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    /* there is only one row thb */
-    row-gap: 1vh;
-    column-gap: 1vw;
-    margin-top: 1vh;
-    /* for editing */
-    /* border: 1px solid white; */
-    width: 90%;
-    box-sizing: border-box;
+.loginandregister {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  /* there is only one row thb */
+  row-gap: 1vh;
+  column-gap: 1vw;
+  margin-top: 1vh;
+  /* for editing */
+  /* border: 1px solid white; */
+  width: 90%;
+  box-sizing: border-box;
 }
 
 /* loginandregisterbuttons */
 
-.loginandregisterbuttons{
-    background-color: rgb(236, 232, 232);
-    /* font color */
-    color: #12345c;
-    height: 4vh;
-    width: 5vw;
-    font-family: 'Barlow',Helvetica, sans-serif;
-    font-weight: 600;
-    font-size: 80%;
-    border-radius: 6px;
+.loginandregisterbuttons {
+  background-color: rgb(236, 232, 232);
+  /* font color */
+  color: #12345c;
+  height: 4vh;
+  width: 5vw;
+  font-family: "Barlow", Helvetica, sans-serif;
+  font-weight: 600;
+  font-size: 80%;
+  border-radius: 6px;
 }
 
-.loginandregisterbuttons a{
-    text-decoration: none;
-    color: #12345c;
-    
+.loginandregisterbuttons a {
+  text-decoration: none;
+  color: #12345c;
 }
-.loginandregisterbuttons a:hover{
-    text-decoration: underline;
-    text-decoration-thickness: 2px; /* Makes underline thicker */
-    /* Adjusts the space between text and underline */
-    text-underline-offset: .26vh; 
+.loginandregisterbuttons a:hover {
+  text-decoration: underline;
+  text-decoration-thickness: 2px; /* Makes underline thicker */
+  /* Adjusts the space between text and underline */
+  text-underline-offset: 0.26vh;
 }
