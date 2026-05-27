@@ -23,7 +23,7 @@ body {
   flex-direction: row;
   /* aligning the rows to the right */
   justify-content: flex-end;
-  border: 3px solid coral;
+  border: 3px solid transparent;
   height: 21vh;
   margin: 0.25vh 1.6vh 0.5vh 1.6vh;
   /* add background image now */
@@ -62,7 +62,7 @@ body {
   /* vertical alignment when column */
   /* aligning center */
   justify-content: center;
-  border: 0.25vw solid rgb(103, 122, 111);
+  border: 0px solid rgb(103, 122, 111);
   width: calc(60vw - 0.5vw);
   height: 21vh;
   row-gap: 1vh;
@@ -169,11 +169,12 @@ body {
 }
 /* this is in central div */
 .welcomemessage {
-  font-family: Helvetica, Arial sans-serif;
+  font-family:
+    Helvetica,
+    Arial sans-serif;
   font-size: 156%;
   margin: 10px 10px;
   padding: 1vh 2vw;
-  border: 3px solid black;
 }
 
 /* p's in central div */
